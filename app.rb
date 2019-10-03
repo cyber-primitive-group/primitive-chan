@@ -1,6 +1,8 @@
 require 'rack'
 require 'rack/app'
 
+require_relative './system/boot.rb'
+
 class App < Rack::App
   get '/' do
     'Root, hello!, there are should be boards list'
