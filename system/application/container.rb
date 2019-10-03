@@ -1,13 +1,15 @@
 require 'dry/system/container'
 
-class ApplicationContainer < Dry::System::Container
-  configure do |config|
-    config.root = Pathname('./app')
-    config.auto_register = 'lib'
-  end
+module Application
+  class Container < Dry::System::Container
+    configure do |config|
+      config.root = Pathname('./app')
+      config.auto_register = 'lib'
+    end
 
-  load_paths!('lib')
+    load_paths!('lib')
+  end
 end
 
-Import = ApplicationContainer.injector
+Import = Application::Container.injector
 

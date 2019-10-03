@@ -1,4 +1,4 @@
-ApplicationContainer.boot(:logger) do
+Application::Container.boot(:logger) do
   init do
     require 'logger'
   end
