@@ -43,9 +43,18 @@ GEM
       dry-logic (~> 1.0, >= 1.0.2)
     eventmachine (1.2.7)
     ice_nine (0.11.2)
+    pg (1.1.4)
     rack (2.0.7)
     rack-app (7.5.2)
       rack
+    rom (5.1.2)
+      rom-changeset (~> 5.1)
+      rom-core (~> 5.1, >= 5.1.2)
+      rom-repository (~> 5.1)
+    rom-changeset (5.1.2)
+      dry-core (~> 0.4)
+      rom-core (~> 5.1, >= 5.1.2)
+      transproc (~> 1.0, >= 1.1.0)
     rom-core (5.1.2)
       concurrent-ruby (~> 1.1)
       dry-container (~> 0.7)
@@ -56,6 +65,10 @@ GEM
       dry-struct (~> 1.0)
       dry-types (~> 1.0)
       transproc (~> 1.0, >= 1.1.0)
+    rom-repository (5.1.2)
+      dry-core (~> 0.4)
+      dry-initializer (~> 3.0, >= 3.0.1)
+      rom-core (~> 5.1, >= 5.1.2)
     rom-sql (3.0.1)
       dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
@@ -74,8 +87,10 @@ PLATFORMS
 
 DEPENDENCIES
   dry-system
+  pg
   rack
   rack-app
+  rom
   rom-sql
   thin
 
